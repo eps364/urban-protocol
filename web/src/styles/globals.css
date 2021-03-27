@@ -1,3 +1,7 @@
+:root {
+  --bg-color: #F3FEB0;
+}
+
 html,
 body {
   padding: 0;
