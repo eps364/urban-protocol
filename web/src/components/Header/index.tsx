@@ -1,14 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import styles from './Header.module.css'
 
 
 const Header = () => (
-  <div>
+  <div className={styles.container}>
     <Head>
       
     </Head>
-    <header>
+    <header className={styles.container}>
       <Link href="/">
         Home
       </Link>
