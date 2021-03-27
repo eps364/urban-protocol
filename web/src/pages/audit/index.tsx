@@ -13,7 +13,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Abertura de protocolo.
+          Auditoria do sistema.
         </p>
 
         <div className={styles.grid}>

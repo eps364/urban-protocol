@@ -1,8 +1,10 @@
 import styles from '../../styles/Home.module.css'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import React from 'react'
+import Link from 'next/link'
 
-export default function Home() {
+export default function Query() {
   return (
     <div className={styles.container}>
       <Header />
@@ -17,8 +19,10 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          
-          
+          <Link href="/">
+            Home
+          </Link>
+
         </div>
       </main>
       <Footer />
