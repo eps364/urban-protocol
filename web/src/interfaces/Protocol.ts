@@ -1,5 +1,6 @@
 import {User} from './User'
 import {Department} from './Department'
+import { File } from './File'
 
 enum typeProtocol {
   protocolo,
@@ -16,4 +17,5 @@ export type Protocol = {
   department: Department
   responsible: User
   ProtocolsChildren: Protocol[]
+  file: File[]
 }
