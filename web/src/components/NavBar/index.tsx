@@ -20,7 +20,9 @@ const NavBar: NextPage = () => {
       if (!menu.find(tem => tem.father === item.father)) {
         menu.push({ id: item.id, father: item.father, pageContext: item.pageContext })
       }
-    })
+    }) 
+    }else {
+      menu.push({"id": 0,"father": "Home", "pageContext": "/"})
   
     console.log(menu)
   }
