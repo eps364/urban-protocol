@@ -13,9 +13,9 @@ interface Menu {
 const NavBar: NextPage = () => {
   const roles: Role[] = useContext(RolesContext)
 
-  const menu: Menu[] = [{ id: 1000, father: "Home", pageContext: "/" }]
+  const menu: Menu[] = []
 
-  if(menu.length==1){
+  if(menu.length<1){
     roles.map(item => {
       if (!menu.find(tem => tem.father === item.father)) {
         menu.push({ id: item.id, father: item.father, pageContext: item.pageContext })

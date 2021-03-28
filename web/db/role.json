@@ -1,5 +1,13 @@
 [
     {
+        "id": "0",
+        "name": "ROLE_HOME",
+        "description": "Home inicial",
+        "father": "Home",
+        "menuDescription": "Home",
+        "pageContext":"/"
+    },
+    {
         "id": "1",
         "name": "ROLE_CREATE_USER",
         "description": "Criação de Novo Usuário",
