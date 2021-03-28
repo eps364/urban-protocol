@@ -1,9 +1,10 @@
-import React from 'react'
+import { NextPage } from 'next'
 
-const Footer = () => (
-    <footer>
-        Sistema de Protocolo - 2021
-    </footer>
-)
-
+const Footer: NextPage = () => {
+    return (
+        <footer>
+            Sistema de Protocolo - 2021
+        </footer>
+    )
+}
 export default Footer

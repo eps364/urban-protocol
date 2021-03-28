@@ -1,19 +1,13 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import { NextPage } from 'next'
 
 
-const Header = () => (
-  <div>
-    <Head>
-      
-    </Head>
-    <header>
-      <Link href="/">
-        Home
-      </Link>
-    </header>
-  </div>
-)
-
+const Header: NextPage = () => {
+    
+    return (
+        <header>
+            <h1>Bem vindo ao <strong><a href="/" target="_blank">{process.env.NEXT_PUBLIC_NAME}</a></strong></h1>
+            
+        </header>
+    )
+}
 export default Header

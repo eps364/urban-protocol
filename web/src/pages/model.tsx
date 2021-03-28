@@ -4,16 +4,9 @@ const Home: NextPage = () => {
   return (
     <main>
       <p >
-        Protocolo
+        Model
       </p>
     </main>
   )
 }
 export default Home
-
-
-
-
-
-
-
