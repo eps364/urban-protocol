@@ -13,7 +13,7 @@ interface Menu {
 const NavBar: NextPage = () => {
   const roles: Role[] = useContext(RolesContext)
 
-  const menu: Menu[] = []
+  const menu: Menu[] = [{"id": 0,"father": "Home", "pageContext": "/"}]
 
   if(menu.length<1){
     roles.map(item => {
@@ -21,12 +21,7 @@ const NavBar: NextPage = () => {
         menu.push({ id: item.id, father: item.father, pageContext: item.pageContext })
       }
     }) 
-    }else {
-      menu.push({"id": 0,"father": "Home", "pageContext": "/"})
-  
-    console.log(menu)
-  }
-  
+  }  
 
   return (
     <nav>
