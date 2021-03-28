@@ -4,7 +4,7 @@ import Header from '../Header'
 import NavBar from '../NavBar'
 
 const Layout: NextPage = ({ children }) => {
-    const session = false
+    const session = true
     return (
         <>
         < div className="content" >

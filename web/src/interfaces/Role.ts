@@ -5,6 +5,7 @@ export type Role = {
   father?: string
   menuDescription?: string
   pageContext?:string
+  icon?:string
 }
 
 enum RoleName {
