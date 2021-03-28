@@ -1,22 +1,48 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
+import { useContext } from 'react'
+import { RolesContext } from '../../context/RolesContext'
+import { Role } from '../../interfaces/Role'
+
+interface Menu {
+  id: number,
+  father?: string,
+  pageContext?: string
+}
 
 const NavBar: NextPage = () => {
-    return (
-        <nav>
-          <div className="logo">
-            <h1>{process.env.NAME}</h1>
-            Você esta logado como: <strong>José da Silva</strong>
-          </div>
-          <div>
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/protocol"><a>Protocolo</a></Link>
-            <Link href="/groups"><a>Grupo</a></Link>
-            <Link href="/users"><a>Usuários</a></Link>
-            <Link href="/audit"><a>Auditoria</a></Link>
-          </div>
-        </nav>
-      )
-    }
-export default NavBar
+  const roles: Role[] = useContext(RolesContext)
 
+  const menu: Menu[] = [{ id: 1000, father: "Home", pageContext: "/" }]
+
+  if(menu.length==1){
+    roles.map(item => {
+      if (!menu.find(tem => tem.father === item.father)) {
+        menu.push({ id: item.id, father: item.father, pageContext: item.pageContext })
+      }
+    })
+  
+    console.log(menu)
+  }
+  
+
+  return (
+    <nav>
+      <div className="logo">
+        <h1>{process.env.NAME}</h1>
+
+            Você esta logado como: <strong>José da Silva</strong>
+      </div>
+      <div>
+
+        {
+          menu.map((item) => (
+            <Link href={item.pageContext} key={item.id}><a>{item.father}</a></Link>
+          ))
+        }
+      </div>
+    </nav >
+  )
+}
+
+export default NavBar

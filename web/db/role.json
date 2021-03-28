@@ -5,7 +5,7 @@
         "description": "Criação de Novo Usuário",
         "father": "Usuário",
         "menuDescription": "Novo Usuário",
-        "pageContext":"/user/add"
+        "pageContext":"/users"
     },
     {
         "id": "2",
@@ -13,7 +13,7 @@
         "description": "Consulta de Usuário",
         "father": "Usuário",
         "menuDescription": "Consulta Usuario",
-        "pageContext":"/user/query"
+        "pageContext":"/users"
     },
     {
         "id": "3",
@@ -21,7 +21,7 @@
         "description": "Editar Usuário",
         "father": "Usuário",
         "menuDescription": "Editar Usuário",
-        "pageContext":"/user/edit"
+        "pageContext":"/users"
     },
     {
         "id": "4",
@@ -29,7 +29,7 @@
         "description": "Excluir Usuário",
         "father": "Usuário",
         "menuDescription": "Excluir Usuário",
-        "pageContext":"/user/delete"
+        "pageContext":"/users"
     },
     {
         "id": "5",
@@ -37,7 +37,7 @@
         "description": "Criar Grupo",
         "father": "Grupo",
         "menuDescription": "Criar Grupo",
-        "pageContext":"/group/add"
+        "pageContext":"/groups"
     },
     {
         "id": "6",
@@ -45,7 +45,7 @@
         "description": "Consultar Grupo",
         "father": "Grupo",
         "menuDescription": "Consultar Grupo",
-        "pageContext":"/group/query"
+        "pageContext":"/groups"
     },
     {
         "id": "7",
@@ -53,7 +53,7 @@
         "description": "Editar Grupo",
         "father": "Grupo",
         "menuDescription": "Editar Grupo",
-        "pageContext":"/group/edit"
+        "pageContext":"/groups"
     },
     {
         "id": "8",
@@ -61,7 +61,7 @@
         "description": "Excluir Grupo",
         "father": "Grupo",
         "menuDescription": "Excluir Grupo",
-        "pageContext":"/group/delete"
+        "pageContext":"/groups"
     },
 
     {
@@ -78,7 +78,7 @@
         "description": "Consulta Protocolo",
         "father": "Protocolo",
         "menuDescription": "Consulta Protocolo",
-        "pageContext":"/protocol/query"
+        "pageContext":"/protocol"
     },
     {
         "id": "11",
@@ -86,7 +86,7 @@
         "description": "Editar Protocolo",
         "father": "Protocolo",
         "menuDescription": "Editar Protocolo",
-        "pageContext":"/protocol/edit"
+        "pageContext":"/protocol"
     },
     {
         "id": "12",
@@ -94,7 +94,15 @@
         "description": "Excluir Protocolo",
         "father": "Protocolo",
         "menuDescription": "Excluir Protoloco",
-        "pageContext":"/protocol/delete"
+        "pageContext":"/protocol"
+    }, 
+    {
+        "id": "13",
+        "name": "ROLE_CREATE_USER_TESTE",
+        "description": "Criação de Novo Usuário TESte",
+        "father": "Usuário",
+        "menuDescription": "Novo Usuário Teste",
+        "pageContext":"/users"
     }
 ]
 
