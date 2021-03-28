@@ -106,11 +106,11 @@
     }, 
     {
         "id": "13",
-        "name": "ROLE_CREATE_USER_TESTE",
-        "description": "Criação de Novo Usuário TESte",
-        "father": "Usuário",
-        "menuDescription": "Novo Usuário Teste",
-        "pageContext":"/users"
+        "name": "ROLE_CREATE_AUDIT",
+        "description": "Auditoria via Log",
+        "father": "Audit",
+        "menuDescription": "Auditoria",
+        "pageContext":"/audit"
     }
 ]
 
