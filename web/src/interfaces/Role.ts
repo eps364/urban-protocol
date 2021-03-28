@@ -2,6 +2,9 @@ export type Role = {
   id: number
   name: RoleName
   description: string
+  father?: string
+  menuDescription?: string
+  pageContext?:string
 }
 
 enum RoleName {
