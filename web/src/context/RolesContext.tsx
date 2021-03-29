@@ -11,7 +11,7 @@ export const RolesContext = createContext<Role[]>([{
 }])
 
 const RolesProvider: React.FC = (props) => {
-    const [roles, setRoles] = useState()
+    const [roles, setRoles] = useState<Role[]>([])
 
     useEffect(() => {
         async function fetchData() {

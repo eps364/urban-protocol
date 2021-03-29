@@ -1,14 +1,15 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { User } from '../../interfaces/User'
+import { Role } from '../../interfaces/Role'
 import dbRole from '../../../db/role.json'
 
-interface ResponseType {
-    message: string
-}
+// interface ResponseType {
+//     message: string
+// }
 
-const roles: User = dbRole
+const roles: Role[] = dbRole
 
-export default (req: NextApiRequest, res: NextApiResponse<ResponseType>): void => {
+export default (req: NextApiRequest, res: NextApiResponse<Role[]>): void => {
+    console.log(req.body)
     return res.status(200).json(roles)
 }
 

@@ -1,6 +1,6 @@
 export type Role = {
   id: number
-  name: RoleName
+  name: RoleName | string
   description: string
   father: string
   menuDescription: string
