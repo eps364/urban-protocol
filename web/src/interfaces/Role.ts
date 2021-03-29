@@ -2,13 +2,14 @@ export type Role = {
   id: number
   name: RoleName
   description: string
-  father?: string
-  menuDescription?: string
-  pageContext?:string
+  father: string
+  menuDescription: string
+  pageContext:string
   icon?:string
 }
 
-enum RoleName {
+export enum RoleName {
+  ROLE_HOME,
   ROLE_CREATE_USER,
   ROLE_READ_USER,
   ROLE_UPDATE_USER,

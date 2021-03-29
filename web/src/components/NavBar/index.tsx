@@ -2,20 +2,21 @@ import { NextPage } from 'next'
 import Link from 'next/link'
 import { useContext } from 'react'
 import { RolesContext } from '../../context/RolesContext'
-import { Role } from '../../interfaces/Role'
+//import { Role } from '../../interfaces/Role'
 
 interface Menu {
   id: number,
-  father?: string,
-  pageContext?: string
+  father: string,
+  pageContext: string
 }
 
 const NavBar: NextPage = () => {
-  const roles: Role[] = useContext(RolesContext)
+  const roles = useContext(RolesContext)
+  //if(roles===null) throw new Error("Roles null");
 
   const menu: Menu[] = [{"id": 0,"father": "Home", "pageContext": "/"}]
 
-  if(menu.length<1){
+  if(menu.length<=1){
     roles.map(item => {
       if (!menu.find(tem => tem.father === item.father)) {
         menu.push({ id: item.id, father: item.father, pageContext: item.pageContext })
