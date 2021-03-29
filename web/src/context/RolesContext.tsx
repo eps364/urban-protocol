@@ -1,9 +1,17 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react';
+import { RoleName, Role } from '../interfaces/Role'
 
-export const RolesContext = createContext({})
+export const RolesContext = createContext<Role[]>([{
+    "id": 0,
+    "name": RoleName.ROLE_HOME,
+    "description": "Home inicial",
+    "father": "Home",
+    "menuDescription": "Home",
+    "pageContext": "/"
+}])
 
-export const RolesProvider = (props) => {
-    const [roles, setRoles] = useState()
+const RolesProvider: React.FC = (props) => {
+    const [roles, setRoles] = useState<Role[]>([])
 
     useEffect(() => {
         async function fetchData() {
@@ -12,24 +20,18 @@ export const RolesProvider = (props) => {
             setRoles(rolesJson)
         }
         fetchData();
-      }, []); 
+    }, []);
     return (
         <RolesContext.Provider
-            value={ roles }>
-                {props.children}
+            value={roles}
+        >
+            {props.children}
         </RolesContext.Provider>
     )
 }
 
-export const getStaticProps = async () => {
-    const res = await fetch('http://localhost:3000/api/roles')
-    const data = await res.json()
-    return {
-        props: {
-            roles: data
-        }
-    }
-  }
+export default RolesProvider
+
 
 
 

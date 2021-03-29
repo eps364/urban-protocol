@@ -3,8 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css'
 import Layout from '../components/Layout';
-//import 'tailwindcss/tailwind.css'
-import { RolesProvider} from '../context/RolesContext'
+import RolesProvider from '../context/RolesContext'
 
 export default function App({ Component, pageProps }: AppProps ) {
     return (
