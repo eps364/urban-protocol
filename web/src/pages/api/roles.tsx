@@ -14,7 +14,7 @@ export default (req: NextApiRequest, res: NextApiResponse<Role[]>): void => {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch('http://localhost:3000/api/roles')
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/roles`)
     const data = await res.json()
   
     return {

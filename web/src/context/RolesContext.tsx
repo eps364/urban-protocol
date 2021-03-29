@@ -15,7 +15,7 @@ const RolesProvider: React.FC = (props) => {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch('http://localhost:3000/api/roles')
+            const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/roles`)
             const rolesJson = await res.json()
             setRoles(rolesJson)
         }
