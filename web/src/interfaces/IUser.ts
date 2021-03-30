@@ -1,7 +1,7 @@
-import {Role} from './Role'
-import {Group} from './Group'
+import {IRole} from './IRole'
+import {IGroup} from './IGroup'
 
-export type User = {
+export type IUser = {
   id: number
   name: string
   last_name: string
@@ -20,6 +20,6 @@ export type UserNew = {
   cpf: string
   password:string
   password_confirm:string
-  group?:Group[]
-  role?: Role[]
+  group?:IGroup[]
+  role?: IRole[]
 }
