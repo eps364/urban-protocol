@@ -1,26 +1,26 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { ObjectShape, OptionalObjectSchema } from 'yup/lib/object'
-import { rolesSchema } from '../schema/roles'
+import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
+import { number, object } from 'yup';
+import { ObjectShape, OptionalObjectSchema } from 'yup/lib/object';
 
-const handle = (req: NextApiRequest, res: NextApiResponse) => {
-    res.status(200).json({ ...req.body, method: req.method })
+export function validate(
+  schema: OptionalObjectSchema<ObjectShape>,
+  handler: NextApiHandler
+) {
+  return async (req: NextApiRequest, res: NextApiResponse) => {
+    //if (['POST', 'PUT'].includes(req.method)) {
+      try {
+        const newSchema =
+          req.method === 'POST'
+            ? schema
+            : schema.concat(object({ id: number().required().positive() }));
+
+        req.body = await newSchema
+          .camelCase()
+          .validate(req.body, { abortEarly: false, stripUnknown: true });
+      } catch (error) {
+        return res.status(400).json(error);
+      }
+    //}
+    await handler(req, res);
+  };
 }
-
-export async function validate(schema: OptionalObjectSchema<ObjectShape>) {
-    return async (req: NextApiRequest, res: NextApiResponse) => {
-        if (['POST', 'PUT'].includes(req.method)) {
-            try {
-                req.body = await schema.validate(req.body,
-                    {
-                        stripUnknown: true,
-                        abortEarly: false
-                    })
-            } catch (error) {
-                return res.status(400).json(error)
-            }
-        }
-        await handle(req, res)
-    }
-}
-
-export default validate(rolesSchema, handle)
