@@ -1,4 +1,4 @@
-export type File = {
+export type IFile = {
     id: number
     type: string
     name: string

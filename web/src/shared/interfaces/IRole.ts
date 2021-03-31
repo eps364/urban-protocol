@@ -1,4 +1,4 @@
-export type Role = {
+export type IRole = {
   id: number
   name: RoleName | string
   description: string

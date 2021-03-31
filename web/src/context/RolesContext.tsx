@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
-import { RoleName, Role } from '../interfaces/Role'
+import { RoleName, IRole } from '../shared/interfaces/IRole'
 
-export const RolesContext = createContext<Role[]>([{
+export const RolesContext = createContext<IRole[]>([{
     "id": 0,
     "name": RoleName.ROLE_HOME,
     "description": "Home inicial",
@@ -11,11 +11,11 @@ export const RolesContext = createContext<Role[]>([{
 }])
 
 const RolesProvider: React.FC = (props) => {
-    const [roles, setRoles] = useState<Role[]>([])
+    const [roles, setRoles] = useState<IRole[]>([])
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch('http://localhost:3000/api/roles')
+            const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/roles`)
             const rolesJson = await res.json()
             setRoles(rolesJson)
         }

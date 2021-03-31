@@ -1,4 +1,4 @@
-export type ResponseError = {
+export type IResponseError = {
     codeStatus: number
     error: string
     message: string
