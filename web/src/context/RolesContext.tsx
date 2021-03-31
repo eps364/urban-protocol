@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { RoleName, IRole } from '../interfaces/IRole'
+import { RoleName, IRole } from '../shared/interfaces/IRole'
 
 export const RolesContext = createContext<IRole[]>([{
     "id": 0,
