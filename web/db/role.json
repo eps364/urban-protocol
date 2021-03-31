@@ -74,7 +74,7 @@
 
     {
         "id": 9,
-        "name": "ROLE_CREATE_PROTOCOL",
+        "name": "ROLE_CREATE_ROLE",
         "description": "Abrir Protocolo",
         "father": "Protocolo",
         "menuDescription": "Abrir Protocolo",
@@ -82,7 +82,7 @@
     },
     {
         "id": 10,
-        "name": "ROLE_READ_PROTOCOL",
+        "name": "ROLE_READ_ROLE",
         "description": "Consulta Protocolo",
         "father": "Protocolo",
         "menuDescription": "Consulta Protocolo",
@@ -111,6 +111,24 @@
         "father": "Audit",
         "menuDescription": "Auditoria",
         "pageContext":"/audit"
+    }
+
+    ,
+    {
+        "id": 14,
+        "name": "ROLE_UPDATE_ROLE",
+        "description": "Editar Rota",
+        "father": "Rota",
+        "menuDescription": "Editar Rota",
+        "pageContext":"/roles"
+    },
+    {
+        "id": 15,
+        "name": "ROLE_DELETE_ROLE",
+        "description": "Excluir Rota",
+        "father": "Rota",
+        "menuDescription": "Excluir Protoloco",
+        "pageContext":"/roles"
     }
 ]
 
