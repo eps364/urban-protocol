@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { IRole } from '../../interfaces/IRole'
+import { IRole } from '../../shared/interfaces/IRole'
 import dbRole from '../../../db/role.json'
 
 // interface ResponseType {
