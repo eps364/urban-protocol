@@ -1,12 +1,12 @@
 export type IRole = {
-  id: number
-  name: RoleName | string
-  description: string
-  father: string
-  menuDescription: string
-  pageContext:string
-  icon?:string
-}
+  id: number;
+  name: RoleName | string;
+  description: string;
+  father: string;
+  menuDescription: string;
+  pageContext: string;
+  icon?: string;
+};
 
 export enum RoleName {
   ROLE_HOME,

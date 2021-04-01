@@ -1,20 +1,19 @@
-import { NextPage } from 'next'
-import Footer from '../Footer'
-import Header from '../Header'
-import NavBar from '../NavBar'
+import { NextPage } from 'next';
+import Container from '@material-ui/core/Container';
+import Footer from '../Footer';
+import Header from '../Header';
+import NavBar from '../NavBar';
 
 const Layout: NextPage = ({ children }) => {
-    const session = true
-    return (
-        <>
-        < div className="content" >
-            { session ? <NavBar /> : <Header />}
-            { children}
-            <Footer />
-        </div >
-        
-        </>
-
-    )
-}
-export default Layout
+  const session = true;
+  return (
+    <>
+      <Container maxWidth="sm">
+        {session ? <NavBar /> : <Header />}
+        {children}
+        <Footer />
+      </Container>
+    </>
+  );
+};
+export default Layout;

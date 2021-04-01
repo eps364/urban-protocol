@@ -1,6 +1,6 @@
-import {IUser} from './IUser'
-import {IDepartment} from './IDepartment'
-import { IFile } from './IFile'
+import { IUser } from './IUser';
+import { IDepartment } from './IDepartment';
+import { IFile } from './IFile';
 
 enum typeProtocol {
   protocolo,
@@ -8,21 +8,21 @@ enum typeProtocol {
 }
 
 export type IProtocol = {
-  id: number
-  status: Status
-  title: string
-  type: typeProtocol
-  description: string
-  user: IUser
-  persona: IUser
-  department: IDepartment
-  responsible: IUser
-  ProtocolsChildren: IProtocol[]
-  file: IFile[]
-}
+  id: number;
+  status: Status;
+  title: string;
+  type: typeProtocol;
+  description: string;
+  user: IUser;
+  persona: IUser;
+  department: IDepartment;
+  responsible: IUser;
+  ProtocolsChildren: IProtocol[];
+  file: IFile[];
+};
 
-enum Status{
+enum Status {
   ABERTO,
   FECHADO,
-  EXCLUIDO
+  EXCLUIDO,
 }

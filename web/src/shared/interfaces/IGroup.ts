@@ -1,7 +1,7 @@
-import {IRole} from './IRole'
+import { IRole } from './IRole';
 
 export type IGroup = {
-  id: number
-  name: string
-  role: IRole[]
-}
+  id: number;
+  name: string;
+  role: IRole[];
+};

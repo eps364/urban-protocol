@@ -1,19 +1,10 @@
-import { NextPage } from 'next'
+import { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
     <main>
-      <p >
-        Protocolo
-      </p>
+      <p>Protocolo</p>
     </main>
-  )
-}
-export default Home
-
-
-
-
-
-
-
+  );
+};
+export default Home;

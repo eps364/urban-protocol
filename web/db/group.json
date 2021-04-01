@@ -1,150 +1,150 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "Usuario",
+    "role": [
+      {
+        "id": 9,
+        "name": "ROLE_CREATE_PROTOCOL",
+        "description": "Abrir Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Abrir Protocolo",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 10,
+        "name": "ROLE_READ_PROTOCOL",
+        "description": "Consulta Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Consulta Protocolo",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 11,
+        "name": "ROLE_UPDATE_PROTOCOL",
+        "description": "Editar Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Editar Protocolo",
+        "pageContext": "/protocol"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Administrador",
+    "role": [
+      {
+        "id": 0,
+        "name": "ROLE_HOME",
+        "description": "Home inicial",
+        "father": "Home",
+        "menuDescription": "Home",
+        "pageContext": "/"
+      },
+      {
         "id": 1,
-        "name": "Usuario",
-        "role": [
-            {
-                "id": 9,
-                "name": "ROLE_CREATE_PROTOCOL",
-                "description": "Abrir Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Abrir Protocolo",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 10,
-                "name": "ROLE_READ_PROTOCOL",
-                "description": "Consulta Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Consulta Protocolo",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 11,
-                "name": "ROLE_UPDATE_PROTOCOL",
-                "description": "Editar Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Editar Protocolo",
-                "pageContext": "/protocol"
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "name": "Administrador",
-        "role": [
-            {
-                "id": 0,
-                "name": "ROLE_HOME",
-                "description": "Home inicial",
-                "father": "Home",
-                "menuDescription": "Home",
-                "pageContext": "/"
-            },
-            {
-                "id": 1,
-                "name": "ROLE_CREATE_USER",
-                "description": "Criação de Novo Usuário",
-                "father": "Usuário",
-                "menuDescription": "Novo Usuário",
-                "pageContext": "/users"
-            },
-            {
-                "id": 2,
-                "name": "ROLE_READ_USER",
-                "description": "Consulta de Usuário",
-                "father": "Usuário",
-                "menuDescription": "Consulta Usuario",
-                "pageContext": "/users"
-            },
-            {
-                "id": 3,
-                "name": "ROLE_UPDATE_USER",
-                "description": "Editar Usuário",
-                "father": "Usuário",
-                "menuDescription": "Editar Usuário",
-                "pageContext": "/users"
-            },
-            {
-                "id": 4,
-                "name": "ROLE_DELETE_USER",
-                "description": "Excluir Usuário",
-                "father": "Usuário",
-                "menuDescription": "Excluir Usuário",
-                "pageContext": "/users"
-            },
-            {
-                "id": 5,
-                "name": "ROLE_CREATE_GROUP",
-                "description": "Criar Grupo",
-                "father": "Grupo",
-                "menuDescription": "Criar Grupo",
-                "pageContext": "/groups"
-            },
-            {
-                "id": 6,
-                "name": "ROLE_READ_GROUP",
-                "description": "Consultar Grupo",
-                "father": "Grupo",
-                "menuDescription": "Consultar Grupo",
-                "pageContext": "/groups"
-            },
-            {
-                "id": 7,
-                "name": "ROLE_UPDATE_GROUP",
-                "description": "Editar Grupo",
-                "father": "Grupo",
-                "menuDescription": "Editar Grupo",
-                "pageContext": "/groups"
-            },
-            {
-                "id": 8,
-                "name": "ROLE_DELETE_GROUP",
-                "description": "Excluir Grupo",
-                "father": "Grupo",
-                "menuDescription": "Excluir Grupo",
-                "pageContext": "/groups"
-            },
-            {
-                "id": 9,
-                "name": "ROLE_CREATE_PROTOCOL",
-                "description": "Abrir Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Abrir Protocolo",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 10,
-                "name": "ROLE_READ_PROTOCOL",
-                "description": "Consulta Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Consulta Protocolo",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 11,
-                "name": "ROLE_UPDATE_PROTOCOL",
-                "description": "Editar Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Editar Protocolo",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 12,
-                "name": "ROLE_DELETE_PROTOCOL",
-                "description": "Excluir Protocolo",
-                "father": "Protocolo",
-                "menuDescription": "Excluir Protoloco",
-                "pageContext": "/protocol"
-            },
-            {
-                "id": 13,
-                "name": "ROLE_CREATE_AUDIT",
-                "description": "Auditoria via Log",
-                "father": "Audit",
-                "menuDescription": "Auditoria",
-                "pageContext": "/audit"
-            }
-        ]
-    }
+        "name": "ROLE_CREATE_USER",
+        "description": "Criação de Novo Usuário",
+        "father": "Usuário",
+        "menuDescription": "Novo Usuário",
+        "pageContext": "/users"
+      },
+      {
+        "id": 2,
+        "name": "ROLE_READ_USER",
+        "description": "Consulta de Usuário",
+        "father": "Usuário",
+        "menuDescription": "Consulta Usuario",
+        "pageContext": "/users"
+      },
+      {
+        "id": 3,
+        "name": "ROLE_UPDATE_USER",
+        "description": "Editar Usuário",
+        "father": "Usuário",
+        "menuDescription": "Editar Usuário",
+        "pageContext": "/users"
+      },
+      {
+        "id": 4,
+        "name": "ROLE_DELETE_USER",
+        "description": "Excluir Usuário",
+        "father": "Usuário",
+        "menuDescription": "Excluir Usuário",
+        "pageContext": "/users"
+      },
+      {
+        "id": 5,
+        "name": "ROLE_CREATE_GROUP",
+        "description": "Criar Grupo",
+        "father": "Grupo",
+        "menuDescription": "Criar Grupo",
+        "pageContext": "/groups"
+      },
+      {
+        "id": 6,
+        "name": "ROLE_READ_GROUP",
+        "description": "Consultar Grupo",
+        "father": "Grupo",
+        "menuDescription": "Consultar Grupo",
+        "pageContext": "/groups"
+      },
+      {
+        "id": 7,
+        "name": "ROLE_UPDATE_GROUP",
+        "description": "Editar Grupo",
+        "father": "Grupo",
+        "menuDescription": "Editar Grupo",
+        "pageContext": "/groups"
+      },
+      {
+        "id": 8,
+        "name": "ROLE_DELETE_GROUP",
+        "description": "Excluir Grupo",
+        "father": "Grupo",
+        "menuDescription": "Excluir Grupo",
+        "pageContext": "/groups"
+      },
+      {
+        "id": 9,
+        "name": "ROLE_CREATE_PROTOCOL",
+        "description": "Abrir Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Abrir Protocolo",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 10,
+        "name": "ROLE_READ_PROTOCOL",
+        "description": "Consulta Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Consulta Protocolo",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 11,
+        "name": "ROLE_UPDATE_PROTOCOL",
+        "description": "Editar Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Editar Protocolo",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 12,
+        "name": "ROLE_DELETE_PROTOCOL",
+        "description": "Excluir Protocolo",
+        "father": "Protocolo",
+        "menuDescription": "Excluir Protoloco",
+        "pageContext": "/protocol"
+      },
+      {
+        "id": 13,
+        "name": "ROLE_CREATE_AUDIT",
+        "description": "Auditoria via Log",
+        "father": "Audit",
+        "menuDescription": "Auditoria",
+        "pageContext": "/audit"
+      }
+    ]
+  }
 ]

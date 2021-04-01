@@ -1,10 +1,7 @@
-import { NextPage } from 'next'
+import { NextPage } from 'next';
+import Box from '@material-ui/core/Box';
 
 const Footer: NextPage = () => {
-    return (
-        <footer>
-            Sistema de Protocolo - 2021
-        </footer>
-    )
-}
-export default Footer
+  return <Box>Sistema de Protocolo - 2021</Box>;
+};
+export default Footer;
