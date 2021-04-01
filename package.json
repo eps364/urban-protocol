@@ -1,6 +1,6 @@
 {
     "private": true,
-    "workspaces": ["ppm-web", "ppm-api"],
+    "workspaces": ["bff", "web"],
     "repository": {
         "url": "https://github.com/eps364/urban-protocol.git"
     }

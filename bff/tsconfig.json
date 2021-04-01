@@ -1,15 +1,45 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es2017",
-    "sourceMap": true,
+    "module": "commonjs",
+    "lib": [
+      "ES6"
+    ],
+    "allowJs": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
+    "rootDir": ".",
+    "removeComments": true,
+    "typeRoots": [
+      "**/node_modules/@types",
+      "types"
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipDefaultLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "incremental": true,
+    "paths": {
+      "@app": [
+        "./src/app/app.module"
+      ],
+      "@common/lib": [
+        "./src/common/lib/index"
+      ],
+      "@common/identity": [
+        "./src/common/identity/index"
+      ],
+      "@common/models": [
+        "./src/common/models/index"
+      ],
+      "@config": [
+        "./src/config/index"
+      ]
+    }
   }
 }
