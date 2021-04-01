@@ -24,7 +24,10 @@ export default function App(props: AppProps) {
     <>
       <Head>
         <title>{process.env.NEXT_PUBLIC_NAME}</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <RolesProvider>
@@ -43,6 +46,6 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export async function getStaticProps() { }
+export async function getStaticProps() {}
 
-export async function getInitialProps() { }
+export async function getInitialProps() {}

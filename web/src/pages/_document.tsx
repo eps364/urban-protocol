@@ -1,15 +1,20 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../styles/theme'
-
+import theme from '../styles/theme';
 
 export default class MyDocument extends Document {
-    // static async getInitialProps(ctx: DocumentContext) {
-    //   const initialProps = await Document.getInitialProps(ctx)
-  
-    //   return initialProps
-    // }
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+
+    return initialProps;
+  }
 
   render() {
     return (
@@ -41,6 +46,9 @@ MyDocument.getInitialProps = async (ctx) => {
 
   return {
     ...initialProps,
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement(),
+    ],
   };
 };

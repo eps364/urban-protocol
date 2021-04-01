@@ -37,17 +37,17 @@ const NavBar: NextPage = () => {
       </div>
       <div>
         {menu.map((item) => (
-          <Button 
-              variant="text"
-              onClick={() => {
+          <Button
+            variant="text"
+            onClick={() => {
               console.info("I'm a button.");
-              }}
-                href={item.pageContext} key={item.id}
-            >
-                {item.father}
-              </Button>
-            ))}
-
+            }}
+            href={item.pageContext}
+            key={item.id}
+          >
+            {item.father}
+          </Button>
+        ))}
       </div>
     </nav>
   );
