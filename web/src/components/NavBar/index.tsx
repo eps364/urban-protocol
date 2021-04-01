@@ -1,10 +1,8 @@
 import { NextPage } from 'next';
-import Link from 'next/link';
-import { useContext, useState } from 'react';
+import Link from '@material-ui/core/Link';
+import { useContext } from 'react';
 import { RolesContext } from '../../context/RolesContext';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import { Button } from '@material-ui/core';
 
 //import { Role } from '../../interfaces/Role'
 
@@ -32,16 +30,6 @@ const NavBar: NextPage = () => {
     });
   }
 
-  const [anchorEl, setAnchorEl] = useState<Element | null>(null);
-
-  const handleClick = (event: Event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <nav>
       <div className="logo">
@@ -50,10 +38,17 @@ const NavBar: NextPage = () => {
       </div>
       <div>
         {menu.map((item) => (
-          <Link href={item.pageContext} key={item.id}>
-            <a>{item.father}</a>
-          </Link>
-        ))}
+          <Button 
+              variant="text"
+              onClick={() => {
+              console.info("I'm a button.");
+              }}
+                href={item.pageContext} key={item.id}
+            >
+                {item.father}
+              </Button>
+            ))}
+
       </div>
     </nav>
   );

@@ -1,15 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-//import '../styles/globals.css'
 import Layout from '../components/Layout';
 import RolesProvider from '../context/RolesContext';
-
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../styles/theme';
-
-import PropTypes from 'prop-types';
+//import '../styles/globals.css'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -26,11 +24,7 @@ export default function App(props: AppProps) {
     <>
       <Head>
         <title>{process.env.NEXT_PUBLIC_NAME}</title>
-        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
         <RolesProvider>
@@ -49,6 +43,6 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export async function getStaticProps() {}
+export async function getStaticProps() { }
 
-export async function getInitialProps() {}
+export async function getInitialProps() { }
