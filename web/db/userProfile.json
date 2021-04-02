@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "name": "Emerson",
+    "email": "pereiradasilva.emerson@gmail.com",
+    "last_name": "Silva",
+    "cpf": "123456789011",
+    "nick_name": "Emerson",
+    "roles":[{
+
+    }],
+    "group":[{
+        
+    }]
+}

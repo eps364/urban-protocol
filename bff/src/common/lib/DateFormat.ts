@@ -1,4 +1,14 @@
-import { format, addDays, addMonths, addYears, addWeeks, addSeconds, addMilliseconds, addHours, addMinutes } from 'date-fns'
+import {
+    format,
+    addDays,
+    addMonths,
+    addYears,
+    addWeeks,
+    addSeconds,
+    addMilliseconds,
+    addHours,
+    addMinutes
+} from 'date-fns'
 
 type DatePart = 'DAY' | 'MONTH' | 'YEAR' | 'HOUR' | 'MINUTE' | 'SECOND' | 'MILISSECOND' | 'WEEK'
 
