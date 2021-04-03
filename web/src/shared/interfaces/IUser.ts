@@ -1,5 +1,6 @@
 import { IRole } from './IRole';
 import { IGroup } from './IGroup';
+import { IDepartment } from './IDepartment';
 
 export type IUser = {
   id: number;
@@ -8,7 +9,9 @@ export type IUser = {
   nick_name: string;
   email: string;
   cpf: string;
+  dob: string;
   password?: string;
+  departamentId?: IDepartment
 };
 
 export type UserNew = {
@@ -20,6 +23,7 @@ export type UserNew = {
   cpf: string;
   password: string;
   password_confirm: string;
+  departamentId?: IDepartment
   group?: IGroup[];
   role?: IRole[];
 };
