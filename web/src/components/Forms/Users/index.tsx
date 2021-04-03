@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -14,11 +14,11 @@ import Container from '@material-ui/core/Container';
 const FormUser: NextPage = () => {
   return (
     <Container component="main" maxWidth="xs">
-      <div>
+      <Box>
         <Avatar>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h1" variant="h4">
           Usuários
         </Typography>
         <form>
@@ -101,7 +101,7 @@ const FormUser: NextPage = () => {
                 autoComplete="email"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
@@ -113,15 +113,30 @@ const FormUser: NextPage = () => {
                 autoComplete="current-password"
               />
             </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="conf_password"
+                label="Confirmar Senha"
+                type="password"
+                id="conf_password"
+                autoComplete="current-password"
+              />
+            </Grid>
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Li e aceito os termos de uso."
               />
+              <Link href="/">
+                (Termo de uso)
+              </Link>
             </Grid>
           </Grid>
           <Button type="submit" fullWidth variant="contained" color="primary">
-            Sign Up
+            Cadastrar
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
@@ -138,7 +153,7 @@ const FormUser: NextPage = () => {
             </Grid>
           </Grid>
         </form>
-      </div>
+      </Box>
     </Container>
   );
 };

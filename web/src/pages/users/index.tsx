@@ -1,4 +1,5 @@
 import FormUser from '../../components/Forms/Users';
-export default function Home() {
+
+export default function User() {
   return <FormUser />;
 }
