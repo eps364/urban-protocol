@@ -11,7 +11,7 @@ export type IUser = {
   cpf: string;
   dob: string;
   password?: string;
-  departamentId?: IDepartment
+  departamentId?: IDepartment;
 };
 
 export type UserNew = {
@@ -23,7 +23,7 @@ export type UserNew = {
   cpf: string;
   password: string;
   password_confirm: string;
-  departamentId?: IDepartment
+  departamentId?: IDepartment;
   group?: IGroup[];
   role?: IRole[];
 };
